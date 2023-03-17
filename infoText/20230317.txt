@@ -1,0 +1,11 @@
+2023-03-17
+
+
+npm install -g @vue/cli
+
+cli 생성
+vue.cmd create vue-todo
+vue2 옵션으로 프로젝트 생성
+
+반응협 웹태그
+
