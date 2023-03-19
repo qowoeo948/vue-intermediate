@@ -1,0 +1,68 @@
+2023-03-18
+
+1) vue-todo app 리펙토링
+
+
+2) ES6 
+    - const/let, ArrowFunction, Enhanced Object Literals, Modules
+
+
+3) Bable
+    - ES6의 문법을 호환가능한 형태로 컴파일링
+    - https://babeljs.io/
+
+    (1) const/let
+    (2) Hoisting
+        -> 선언한 함수와 변수를 해석기가 가장 상단에 있는 것 처럼 인식
+
+    - function sum () {
+        //function statement
+    }
+
+    - var sum = function() {
+        //function expresion
+    }
+
+    (3) Arrow Funtion 화살표 함수
+    - var sum = function(a,b) => {}
+    - var sum = (a,b) => {}
+        : sum(10,20);
+
+    - arr.forEach(value => {console.log(value)});
+
+
+    (4) Enhanced Object Literals - 향상된 객체 리터럴
+        - 객체의 속성을 메서드로 사용할 떄 function예약어를 생략하고 생성가능
+
+        - var dictionary = {
+            words: 100,
+            //es5
+            lookup: function() {
+                console.log("");
+            },
+            //es6
+            lookup() {
+                console.log("");
+            }
+        }
+
+        - 객체의 속성명과 값 명이 동일 할 때 아래와 같이 축약가능
+            - var figures = 10;
+            var dictionary = {
+                //figures: figures;
+              
+                figures
+            };
+
+
+        (5) Modules - 자바스크립트 모듈화 방법
+            - 자바스크립트 모듈 로더 라이브러리기능을 js언어 자체에서 지원
+            - 호출되기 전까지는 코드 실행과 동작을 하지 않는 특징이있음
+
+            //lib/math.js
+            export function sum(x,y) {return x+y;}
+            export var pi = 3.141593;
+
+            //main.js
+            import {sum} from 'lib/math.js'
+            sum(1,2);
