@@ -43,16 +43,16 @@ export default {
       this.todoItems = [];
     }
   },
-  //시작되자마자 실행되는 인스턴스 : created
-  created() {
-    if (localStorage.length > 0) {
-      for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) !== '') {
-          this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-        }
-      }
-    }
-  },
+  // //시작되자마자 실행되는 인스턴스 : created
+  // created() {
+  //   if (localStorage.length > 0) {
+  //     for (let i = 0; i < localStorage.length; i++) {
+  //       if (localStorage.key(i) !== '') {
+  //         this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+  //       }
+  //     }
+  //   }
+  // },    store.js에서 fetch영역으로 이동됨
   components: {
     TodoHeader,
     TodoInput,

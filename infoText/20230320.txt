@@ -1,0 +1,40 @@
+2023-03-20
+
+1) vuex
+ - 복잡한 애플리케이션의 컴포넌트들을 효율적으로 관리하는 라이브러리
+ - 컴포넌트가 정말많아졌을 떄 잘 관리할수있는방법이 무엇일까
+  -> vuex
+
+ - 무수히많은 컴포넌트의 데이터를 관리하기 위한 상태 관리 패턴이자 라이브러리
+ - react의 Flux패턴에서 기인함
+
+
+ -- vuex 컨셉 (단방향 데이터)
+  - State: 컴포넌트간 공유하는 데이터 data()
+  - View: 데이터를 표시하는 화면 template
+  - Action: 사용자의 입력에 따라 데이터를 변경하는 methods
+
+-- vuex 구조
+ - 컴포넌트->비동기 로직->동기 로직->상태
+
+  (1) Flux 패턴
+
+
+  (2) state, getters, mutations, actions 학습
+
+
+  (3) Helper 함수 기능 소개
+
+
+  ------------------------------------------------------
+  vuex 설치하기
+  npm install vuex --save
+
+  npm i vuex@3.6.2  -> 이걸로
+
+  Vuex 기술요소
+  1) state: 여러 컴포넌트에 공유되는 데이터 data
+  2) gettes: 연산된 state값을 접근하는 속성 computed
+  3) mutations: state값을 변경하는 이벤트 로직/메서드 methods
+  4) actions: 비동기처리 로직을 선언하는 메서드 aysnc methods
+
