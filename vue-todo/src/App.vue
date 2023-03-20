@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <TodoHeader/>
-    <TodoInput v-on:addTodoItem="addOneItem"/>
-    <TodoList v-bind:propsdata="todoItems" 
-        v-on:removeItem="removeOntItem"
-        v-on:toggleItem="toggleOneItem"/>
-    <TodoFooter v-on:clearAll='clearAllItem'/>
+    <TodoInput/>
+    <!-- <TodoList v-bind:propsdata="todoItems" 
+        v-on:removeItem="removeOneItem"
+        v-on:toggleItem="toggleOneItem"/> -->
+    <TodoList/>
+   <!--  <TodoFooter v-on:clearAll='clearAllItem'/> -->
+   <TodoFooter/>
   </div>
 </template>
 
@@ -16,32 +18,32 @@ import TodoList from './components/TodoList.vue';
 import TodoFooter from './components/TodoFooter.vue';
 
 export default {
-  data() {
+  /* data() {
     return {
       todoItems: [],
     }
-  },
-  methods: {
+  }, */
+  methods: {  //mutations과 같다
     //addOnItem : funtion(todoItem) 과 같은거임
-    addOneItem(todoItem) {
-      const obj = {completed: false, item: todoItem};
-      localStorage.setItem(todoItem, JSON.stringify(obj));
-      this.todoItems.push(obj);
-    },
-    removeOntItem(todoItem, index) {
-        localStorage.removeItem(todoItem.item);
-        this.todoItems.splice(index, 1);
-    },
-    toggleOneItem(todoItem, index) {
-     this.todoItems[index].completed = !this.todoItems[index].completed;
+    // addOneItem(todoItem) {
+    //   const obj = {completed: false, item: todoItem};
+    //   localStorage.setItem(todoItem, JSON.stringify(obj));
+    //   this.todoItems.push(obj);
+    // },
+    // removeOneItem(todoItem, index) {
+    //     localStorage.removeItem(todoItem.item);
+    //     this.todoItems.splice(index, 1);
+    // },
+    // toggleOneItem(todoItem, index) {
+    //  this.todoItems[index].completed = !this.todoItems[index].completed;
 
-      localStorage.removeItem(todoItem.item);
-      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
-    },
-    clearAllItem() {
-      localStorage.clear();
-      this.todoItems = [];
-    }
+    //   localStorage.removeItem(todoItem.item);
+    //   localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+    // },
+    // clearAllItem() {
+    //   localStorage.clear();
+    //   this.todoItems = [];
+    // }
   },
   // //시작되자마자 실행되는 인스턴스 : created
   // created() {

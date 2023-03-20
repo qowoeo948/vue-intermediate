@@ -16,13 +16,23 @@
 
 <script>
 export default {
-  props:['propsdata'],
+  // props:['propsdata'], 상위 this.$store.state.todoItems로 받아서 쓸떄없음
   methods: {
     removeTodo(todoItem, index) {
-        this.$emit('removeItem', todoItem, index);
+       // this.$emit('removeItem', todoItem, index);
+
+      this.$store.commit('removeOneItem', {
+        todoItem,
+        index,
+        });
     },
     toggleComplete(todoItem, index) {
-      this.$emit('toggleItem',todoItem, index);
+      // this.$emit('toggleItem',todoItem, index);
+
+      this.$store.commit('toggleOneItem', {
+        todoItem,
+        index,
+      });
     }
   },
 }
