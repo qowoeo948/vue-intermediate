@@ -8,6 +8,8 @@
     <TodoList/>
    <!--  <TodoFooter v-on:clearAll='clearAllItem'/> -->
    <TodoFooter/>
+
+   <DemoView/>
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import TodoHeader from './components/TodoHeader.vue';
 import TodoInput from './components/TodoInput.vue';
 import TodoList from './components/TodoList.vue';
 import TodoFooter from './components/TodoFooter.vue';
+
+import DemoView from './components/DemoView.vue'
 
 export default {
   /* data() {
@@ -59,11 +63,12 @@ export default {
     TodoHeader,
     TodoInput,
     TodoList,
-    TodoFooter
+    TodoFooter,
     // 'TodoHeader': TodoHeader,
     // 'TodoInput' : TodoInput,
     // 'TodoList' : TodoList,
     // 'TodoFooter' : TodoFooter,
+    DemoView
   }
 }
 </script>
